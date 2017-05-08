@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dropdownmenu.MainActivity"
+    >
+
+    <com.example.dropdownmenu.DropDownMenu
+        android:orientation="vertical"
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 第一个布局是顶部layout -->
+        <TextView
+            android:id="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:text="点击弹出条件筛选框"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            />
+        <!-- 第二个布局是筛选条件的layout -->
+        <TextView
+            android:id="@+id/view_menu"
+            android:layout_below="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="具体筛选条件的布局"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            />
+
+    </com.example.dropdownmenu.DropDownMenu>
+
+</FrameLayout>
