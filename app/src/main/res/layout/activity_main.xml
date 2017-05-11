@@ -23,16 +23,21 @@
             android:textColor="@android:color/white"
             />
         <!-- 第二个布局是筛选条件的layout -->
-        <TextView
-            android:id="@+id/view_menu"
-            android:layout_below="@+id/view_top"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="具体筛选条件的布局"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            />
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_top">
+            <TextView
+                android:id="@+id/view_menu"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="具体筛选条件的布局"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+
 
     </com.example.dropdownmenu.DropDownMenu>
 
