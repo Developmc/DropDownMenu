@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -100,6 +101,29 @@ public class DropDownMenuView extends RelativeLayout {
     }
 
     /**
+     * 布局填充完成时
+     */
+    @Override protected void onFinishInflate() {
+        super.onFinishInflate();
+        //检查子view的数量
+        checkChildCount();
+        viewTop = getChildAt(1);
+        viewMenu = getChildAt(2);
+        //设置可点击，避免点击事件传递到底层的viewMask
+        viewTop.setClickable(true);
+        viewMenu.setClickable(true);
+        //设置背景色
+        if(viewTop.getBackground()==null){
+            viewTop.setBackgroundColor(Color.WHITE);
+        }
+        if(viewMenu.getBackground()==null){
+            viewMenu.setBackgroundColor(Color.WHITE);
+        }
+        //默认是隐藏的
+        viewMenu.setVisibility(GONE);
+    }
+
+    /**
      * 检查是否满足条件（需要view绘制完成才能检查）
      */
     private void checkLayout(){
@@ -107,12 +131,6 @@ public class DropDownMenuView extends RelativeLayout {
             @Override public void run() {
                 //检查父布局是否满足要求
                 checkParentLayout();
-                //检查子view的数量
-                checkChildCount();
-                viewTop = getChildAt(1);
-                viewMenu = getChildAt(2);
-                //默认是隐藏的
-                viewMenu.setVisibility(GONE);
             }
         });
     }

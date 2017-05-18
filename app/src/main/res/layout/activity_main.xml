@@ -14,19 +14,25 @@
         android:layout_height="wrap_content"
         app:duration="300">
         <!-- 第一个布局是顶部layout -->
-        <TextView
+        <LinearLayout
             android:id="@+id/view_top"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@color/colorAccent"
-            android:text="点击弹出条件筛选框"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            />
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+            <TextView
+                android:id="@+id/view_filter"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="点击弹出条件筛选框"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
+
         <!-- 第二个布局是筛选条件的layout -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/view_top">
             <TextView
                 android:id="@+id/view_menu"

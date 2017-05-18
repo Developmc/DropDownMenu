@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         dropDownMenu = (DropDownMenuView)findViewById(R.id.dropDownMenu);
-        TextView textView = (TextView) findViewById(R.id.view_top);
+        TextView textView = (TextView) findViewById(R.id.view_filter);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 if(!dropDownMenu.isOpen()){
