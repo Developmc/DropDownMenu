@@ -7,11 +7,12 @@
     tools:context="com.example.dropdownmenu.MainActivity"
     >
 
-    <com.example.dropdownmenu.DropDownMenu
+    <com.example.dropdownmenu.DropDownMenuView
         android:orientation="vertical"
         android:id="@+id/dropDownMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:duration="300">
         <!-- 第一个布局是顶部layout -->
         <TextView
             android:id="@+id/view_top"
@@ -39,6 +40,6 @@
         </LinearLayout>
 
 
-    </com.example.dropdownmenu.DropDownMenu>
+    </com.example.dropdownmenu.DropDownMenuView>
 
 </FrameLayout>

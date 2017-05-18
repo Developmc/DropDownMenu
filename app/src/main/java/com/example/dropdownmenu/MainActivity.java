@@ -7,13 +7,13 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DropDownMenu dropDownMenu;
+    private DropDownMenuView dropDownMenu;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dropDownMenu = (DropDownMenu)findViewById(R.id.dropDownMenu);
+        dropDownMenu = (DropDownMenuView)findViewById(R.id.dropDownMenu);
         TextView textView = (TextView) findViewById(R.id.view_top);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
