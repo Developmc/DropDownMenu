@@ -220,6 +220,9 @@ public class DropDownMenuView extends RelativeLayout {
      * 展开
      */
     public void open(){
+        if(isOpen()){
+            return;
+        }
         if(viewMenu==null){
             return;
         }
@@ -230,6 +233,9 @@ public class DropDownMenuView extends RelativeLayout {
      * 收缩
      */
     public void close(){
+        if (!isOpen()){
+            return;
+        }
         if(viewMenu==null){
             return;
         }
